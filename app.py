@@ -130,5 +130,19 @@ def verify_payment_web():
                          result_status=result_status,
                          verified_amount=verified_amount)
 
+@app.route('/')
+def index():
+    return jsonify({
+        "status": "online", 
+        "message": "Payment Platform API is running",
+        "endpoints": {
+            "/receive-sms": "POST - Receive and process payment SMS",
+            "/verify-payment-web": "GET/POST - Web interface for payment verification"
+        }
+    })
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5000) 
+    # Get port from environment variable for deployment
+    port = int(os.environ.get('PORT', 5000))
+    # Bind to 0.0.0.0 for external access
+    app.run(host='0.0.0.0', port=port, debug=False)
