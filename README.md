@@ -230,3 +230,28 @@ This project is developed for educational and commercial use in Rwanda's mobile 
 ---
 
 For technical questions or contributions, please contact any of the group members listed above.
+
+----
+
+- download sms fowarder app into you phone
+  https://github.com/bogkonstantin/android_income_sms_gateway_webhook.git     #please follow instruction as described in this shared github repository
+
+- activating of the project locally 
+
+- please deploy it on render to get public url link
+
+- generate url link you must add<render url link>/receive-sms
+
+- add this correctly configured url link to the sms forwarder you installed
+
+- this will allow you to autoforwad messsages into the database and process them
+
+- install all packages as found in requirement.txt file
+
+- to activate the project locally 
+	python3 app.py
+
+- access it from here : http://127.0.0.1:5000
+
+- make sure that .env file is create with all necessary cridentials , supabase cridentials must be shared for fully activation of the project 
+
